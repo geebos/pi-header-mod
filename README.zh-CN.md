@@ -4,23 +4,40 @@
 
 ## 安装
 
+### npm（推荐）
+
 ```bash
-pi install ./
+pi install npm:pi-header-mod
 ```
 
-本地直接测试：
+### Git
 
 ```bash
-pi -e ./extensions/index.ts
+pi install git:github.com/geebos/pi-header-mod
+pi install git:github.com/geebos/pi-header-mod@v0.1.0
+```
+
+### GitHub Packages（可选）
+
+发布包名为 `@geebos/pi-header-mod`：
+
+```bash
+# ~/.npmrc
+# @geebos:registry=https://npm.pkg.github.com
+# //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+
+pi install npm:@geebos/pi-header-mod
 ```
 
 ## 配置
 
-运行：
+安装后正常启动 pi，然后运行：
 
 ```text
 /plugin:header
 ```
+
+安装完成后，插件会在后续 pi 会话中自动加载。可以使用 `/plugin:header` 打开配置 UI，也可以使用下面的命令形式进行脚本化配置。
 
 默认配置：
 

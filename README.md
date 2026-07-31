@@ -4,23 +4,40 @@
 
 ## Install
 
+### npm (recommended)
+
 ```bash
-pi install ./
+pi install npm:pi-header-mod
 ```
 
-Or test the extension directly:
+### Git
 
 ```bash
-pi -e ./extensions/index.ts
+pi install git:github.com/geebos/pi-header-mod
+pi install git:github.com/geebos/pi-header-mod@v0.1.0
+```
+
+### GitHub Packages (optional)
+
+Published as `@geebos/pi-header-mod`:
+
+```bash
+# ~/.npmrc
+# @geebos:registry=https://npm.pkg.github.com
+# //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+
+pi install npm:@geebos/pi-header-mod
 ```
 
 ## Configuration
 
-Run:
+After installation, start pi normally and run:
 
 ```text
 /plugin:header
 ```
+
+The extension is loaded automatically in subsequent pi sessions. Use `/plugin:header` to open the configuration UI, or use the command-line forms below for scripted configuration.
 
 The default configuration is:
 
