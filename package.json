@@ -1,0 +1,56 @@
+{
+	"name": "pi-header-mod",
+	"version": "0.1.0",
+	"description": "Add a project identifier request header to pi model requests.",
+	"type": "module",
+	"main": "./extensions/index.ts",
+	"files": [
+		"extensions/",
+		"src/",
+		"README.md",
+		"README.zh-CN.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"check": "npm run typecheck"
+	},
+	"keywords": [
+		"pi-package",
+		"pi",
+		"pi-extension",
+		"pi-coding-agent",
+		"project-identifier",
+		"request-header"
+	],
+	"author": "geebos",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/geebos/pi-header-mod.git"
+	},
+	"bugs": {
+		"url": "https://github.com/geebos/pi-header-mod/issues"
+	},
+	"homepage": "https://github.com/geebos/pi-header-mod#readme",
+	"engines": {
+		"node": ">=20"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"pi": {
+		"extensions": [
+			"./extensions"
+		]
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": ">=0.80.4"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "^0.80.10",
+		"@types/node": "^22.13.10",
+		"typescript": "^5.8.2"
+	}
+}
